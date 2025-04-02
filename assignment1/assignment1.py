@@ -1,13 +1,17 @@
 # Write your code here.
 # TASK1
+
+
 def hello():
     return "Hello!"
 print(hello())  
    # TASK2 
+
 def name():
     return "micheal"
 print(hello() + ", " + name())  
 # TASK3
+
 def calc(a, b, operation="multiply"):
     try:
         match operation:
@@ -38,6 +42,7 @@ print(calc(10, 0, "divide"))
 print(calc('hello', 1, "multiply")) 
 
 # TASK4
+
 def data_type_conversion(value, data_type):
     try:
         match data_type:
@@ -59,6 +64,7 @@ print(data_type_conversion("nonsense", "float"))
 print(data_type_conversion(42, "boolean"))  
 
 # TASK5
+
 def grade(*args):
     try:
         if not args:
@@ -87,6 +93,7 @@ print(grade("hello", 90))
 print(grade())            
 
 # TASK6
+
 def repeat(string, count):
     result = ""
     for _ in range(count):
@@ -99,6 +106,7 @@ print(repeat("!", 5))
 print(repeat("xyz", 0))    
 
 # TASK7
+
 def student_scores(mode, **kwargs):
     if not kwargs:
         return "No student scores provided."
@@ -116,6 +124,7 @@ print(student_scores("best"))
 print(student_scores("average", Alice=85, Bob=92))  
 
 # TASK8
+
 def titleize(text):
     little_words = {"a", "on", "an", "the", "of", "and", "is", "in"}
     words = text.split()
@@ -137,6 +146,7 @@ print(titleize("on an island"))
 print(titleize(""))  
 
 # TASK9
+
 def hangman(secret, guess):
     return "".join(letter if letter in guess else "_" for letter in secret)
 
@@ -146,6 +156,7 @@ print(hangman("mississippi", "sip"))
 print(hangman("python", "xyz"))  
 
 # TASK10
+
 def pig_latin(text):
     vowels = "aeiou"
     words = text.split()
