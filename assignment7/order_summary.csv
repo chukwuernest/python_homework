@@ -1,0 +1,4 @@
+product_id,order_count,total_sales,product_name
+1,2,80.0,Widget A
+2,1,31.0,Widget B
+3,1,72.5,Widget C
