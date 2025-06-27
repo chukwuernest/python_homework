@@ -1,0 +1,60 @@
+function: say_hello
+positional parameters: none
+keyword parameters: none
+return: None
+function: takes_positional
+positional parameters: (1, 2, 3)
+keyword parameters: none
+return: True
+function: takes_keyword
+positional parameters: none
+keyword parameters: {'a': 10, 'b': 20}
+return: <function logger_decorator at 0x000001C72A2DA700>
+function: say_hello
+positional parameters: none
+keyword parameters: none
+return: None
+function: takes_positional
+positional parameters: (1, 2, 3)
+keyword parameters: none
+return: True
+function: takes_keyword
+positional parameters: none
+keyword parameters: {'a': 10, 'b': 20}
+return: <function logger_decorator at 0x000002A487ADA700>
+function: say_hello
+positional parameters: none
+keyword parameters: none
+return: None
+function: takes_positional
+positional parameters: (1, 2, 3)
+keyword parameters: none
+return: True
+function: takes_keyword
+positional parameters: none
+keyword parameters: {'a': 10, 'b': 20}
+return: <function logger_decorator at 0x000002074A0DA700>
+function: say_hello
+positional parameters: none
+keyword parameters: none
+return: None
+function: takes_positional
+positional parameters: (1, 2, 3)
+keyword parameters: none
+return: True
+function: takes_keyword
+positional parameters: none
+keyword parameters: {'a': 10, 'b': 20}
+return: <function logger_decorator at 0x00000217AB0DA700>
+function: say_hello
+positional parameters: none
+keyword parameters: none
+return: None
+function: takes_positional
+positional parameters: (1, 2, 3)
+keyword parameters: none
+return: True
+function: takes_keyword
+positional parameters: none
+keyword parameters: {'a': 10, 'b': 20}
+return: <function logger_decorator at 0x000001B5798DA700>
