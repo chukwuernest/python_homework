@@ -1,7 +1,7 @@
 # MLB History Data Pipeline Project
 
 This project is a full-stack data pipeline that collects, cleans, stores, analyzes, and visualizes historical data from the Major League Baseball (MLB) History website. It includes four key components: web scraping, database import, SQL querying, and an interactive dashboard built with Streamlit.
-
+ 
 ## Overview
 
 This capstone project simulates a real-world data engineering and analytics workflow. It focuses on building a complete pipeline using:

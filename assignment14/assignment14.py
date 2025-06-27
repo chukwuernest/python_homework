@@ -6,6 +6,11 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 
+# -- STAGE 1: SCRAPE DATA --
+# Purpose: Scrape MLB data from Baseball Reference website using Selenium
+# - Uses headless browser to avoid opening a GUI window
+# - Extracts team performance data like year, league, wins, losses, etc.
+# - Saves cleaned and structured data to CSV for reuse
 
 def stage1_scrape_data():
     print(" Stage 1: Scraping MLB data... \n")
@@ -50,7 +55,10 @@ def stage1_scrape_data():
 
     driver.quit()
 
-
+# -- STAGE 2: IMPORT TO SQLITE --
+# Purpose: Import CSV data into SQLite for persistent, queryable storage
+# - Ensures CSV is present and readable
+# - Creates/replaces mlb_stats table in mlb_data.db database
 
 def stage2_import_to_sqlite():
     print("\n Stage 2: Importing CSV to SQLite...")
@@ -74,6 +82,10 @@ def stage2_import_to_sqlite():
         print(" Error importing CSV to database:", str(e))
 
 
+# -- STAGE 3: QUERY DATABASE --
+# Purpose: Query SQLite DB for insights on high-performing MLB teams
+# - Filters for teams with win percentage >= 60%
+# - Returns top 10 such records ordered by win percentage
 
 def stage3_query_database():
     print("\nStage 3: Querying database...")
@@ -103,7 +115,10 @@ def stage3_query_database():
     except Exception as e:
         print("Error querying the database:", str(e))
 
-
+# -- STAGE 4: PLOT DATA --
+# Purpose: Visualize trend in average team win % over years
+# - Queries SQLite DB for average Win_Pct grouped by Year
+# - Creates a line plot using Matplotlib
 
 def stage4_plot_data():
     print("\n Stage 4: Plotting data...")
@@ -112,7 +127,7 @@ def stage4_plot_data():
 
     db_file = "mlb_data.db"
     if not os.path.exists(db_file):
-        print(" Database file not found.")
+        print("  Database file not found.")
         return
 
     try:
@@ -135,9 +150,10 @@ def stage4_plot_data():
     except Exception as e:
         print(" Error generating plot:", str(e))
 
+# -- RUN ALL STAGES --
 
 if __name__ == "__main__":
-    stage1_scrape_data()
-    stage2_import_to_sqlite()
-    stage3_query_database()
-    stage4_plot_data()
+    stage1_scrape_data()   # Step 1: Scrape MLB data from the web
+    stage2_import_to_sqlite()  # Step 2: Save scraped data to SQLite
+    stage3_query_database()    # Step 3: Query the database for top teams
+    stage4_plot_data()         # Step 4: Plot insights using Matplotlib
